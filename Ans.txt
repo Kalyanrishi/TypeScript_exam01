@@ -1,0 +1,36 @@
+1) Write a TypeScript program that finds the factorial of a
+number.
+
+Ans) Source code:
+
+        function FindFactorial(num: number): number {
+    
+    if (num === 0) return 1;
+
+    return num * FindFactorial(num -1);
+}
+
+const numberToFindFactorial: number = 5;
+console.log(`Factorial of ${numberToFindFactorial} is: ${FindFactorial}`);
+
+
+
+2) Write a TypeScript program that generates the
+Fibonacci Series.
+
+Ans) Source code:
+ 
+
+ function generateFibonacci(Length: number): number[] {
+    if (Length <= 0) return [];
+
+    let series = [0, 1];
+    for (let i = 2; i < Length; i++) {
+        series.push(series[i - 1] + series[i - 2]);
+    }
+
+    return Length === 1 ? [0] : series;
+}
+
+const lengthOfSeries = 7;
+console.log(`Fibonacci series of length ${lengthOfSeries} is:`, generateFibonacci(lengthOfSeries));
